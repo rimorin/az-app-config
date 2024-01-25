@@ -4,6 +4,10 @@
 
 A simple Azure Function that reads a value from Azure App Config and returns it as a JSON object.
 
+## Design
+
+The function uses Redis as a distributed cache to store the configuration values. The first time the function is called, it will read the configuration values from Azure App Config and store them in Redis for a defined period of time. Subsequent calls to the function will read the configuration values from Redis instead of Azure App Config.
+
 ## Prerequisites
 
 Before you begin, you need to have the following:
