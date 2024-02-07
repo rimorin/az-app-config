@@ -34,6 +34,20 @@ Here's how you can set these variables:
 4. Add the name and value for each setting and click `OK`.
 5. Click `Save` on the top of the `Configuration` page to save your changes.
 
+## Running Locally
+
+1. Install Azure Functions Core Tools. You can download it from [here](https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=windows%2Ccsharp%2Cbash#v2).
+
+2. Install the Python dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+3. Start your local Azure Function project:
+    ```bash
+    func start
+    ```
+This will start the Azure Functions host and your function can be triggered using HTTP requests.
+
 ## Deployment
 
 1. Install Azure CLI. You can download it from [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli).
